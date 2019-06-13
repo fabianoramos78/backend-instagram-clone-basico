@@ -8,9 +8,9 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
-mongoose.connect('mongodb+srv://fabiano:eNaeIuNW0fwkpsH4@cluster0-qsofr.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://USERNAME:PASSWORD@cluster0-qsofr.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true,
-});
+}); //PASSWORD E USERNAME OBTIDOS NO MONGODB ATLAS (https://cloud.mongodb.com)
 
 app.use((req, res, next) => {
     req.io = io;
